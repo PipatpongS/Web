@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merry Christmas & Happy New Year</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&family=Mali:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #a4161a; /* สีแดงคริสต์มาส */
+            color: white;
+            font-family: 'Mali', cursive; /* ฟอนต์ลายมือน่ารักๆ */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* หิมะตก */
+        .snowflake {
+            color: #fff;
+            font-size: 1em;
+            font-family: Arial;
+            text-shadow: 0 0 1px #000;
+            position: fixed;
+            top: -10%;
+            z-index: 9999;
+            user-select: none;
+            cursor: default;
+            animation-name: snowflakes-fall, snowflakes-shake;
+            animation-duration: 10s, 3s;
+            animation-timing-function: linear, ease-in-out;
+            animation-iteration-count: infinite, infinite;
+            animation-play-state: running, running;
+        }
+        @keyframes snowflakes-fall { 0% { top: -10%; } 100% { top: 100%; } }
+        @keyframes snowflakes-shake { 0% { transform: translateX(0px); } 50% { transform: translateX(80px); } 100% { transform: translateX(0px); } }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+            max-width: 90%;
+            width: 500px;
+            z-index: 10;
+        }
+
+        h1 {
+            color: #1a4d2e; /* สีเขียวคริสต์มาส */
+            margin-bottom: 10px;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            margin: 20px 0;
+            border: 4px solid #1a4d2e;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .message {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-top: 20px;
+            color: #555;
+        }
+        
+        .signature {
+            margin-top: 30px;
+            font-weight: bold;
+            color: #a4161a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="snowflake" style="left: 10%; animation-delay: 0s;">❄</div>
+    <div class="snowflake" style="left: 30%; animation-delay: 2s;">❅</div>
+    <div class="snowflake" style="left: 50%; animation-delay: 4s;">❆</div>
+    <div class="snowflake" style="left: 70%; animation-delay: 1s;">❄</div>
+    <div class="snowflake" style="left: 90%; animation-delay: 3s;">❅</div>
+
+    <div class="container">
+        <h1>🎄 Merry Christmas 🎄<br>& Happy New Year</h1>
+        
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Hc4OrO4LRWw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="message">
+            ถึง น้อง... (ใส่ชื่อเขาตรงนี้)<br><br>
+            ปีใหม่นี้ขอให้มีความสุขมากๆ นะ<br>
+            เพลงนี้พี่ตั้งใจเลือกให้เลย ความหมายมันอาจจะเศร้าหน่อย<br>
+            แต่ก็เป็นความรู้สึกดีๆ ที่พี่มีให้เราเสมอ<br>
+            อาจจะเป็นไปไม่ได้ แต่ก็อยากให้รู้ไว้นะ :)
+        </div>
+
+        <div class="signature">
+            จาก... พี่เอง (หรือชื่อคุณ)
+        </div>
+    </div>
+
+</body>
+</html>
